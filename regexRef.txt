@@ -1,0 +1,48 @@
+Regular expressions, often abbreviated as regex, are powerful tools used for pattern matching and searching within text. They provide a concise and flexible syntax for specifying patterns, allowing you to search for and manipulate text based on specific criteria. This documentation will cover the basic concepts and syntax of regex expressions.
+
+Literal Characters:
+A regex expression can consist of literal characters that match exactly themselves. For example, the regex "cat" matches the sequence "cat" in a text.
+
+Metacharacters:
+Metacharacters are special characters that have a reserved meaning in regex. To match metacharacters as literal characters, you need to escape them with a backslash (). Some common metacharacters are:
+
+. (dot): Matches any single character except a newline.
+\w (word): Matches any word character (letters, digits, or underscore).
+\d (digit): Matches any digit character (0-9).
+\s (whitespace): Matches any whitespace character (space, tab, newline).
+\b (word boundary): Matches the boundary between a word and a non-word character.
+Character Classes:
+Character classes allow you to define a set of characters that can match at a particular position. They are enclosed in square brackets ([]).
+
+[aeiou]: Matches any single vowel character.
+[0-9]: Matches any single digit character.
+[a-z]: Matches any single lowercase letter.
+[A-Z]: Matches any single uppercase letter.
+[a-zA-Z]: Matches any single letter (case-insensitive).
+Quantifiers:
+Quantifiers specify the number of occurrences of the preceding element to match. They follow the element or group they apply to.
+
+(asterisk): Matches zero or more occurrences.
+(plus): Matches one or more occurrences.
+? (question mark): Matches zero or one occurrence.
+{n} (curly braces): Matches exactly n occurrences.
+{n,} (curly braces): Matches n or more occurrences.
+{n,m} (curly braces): Matches between n and m occurrences (inclusive).
+Anchors:
+Anchors are used to specify the position of a match in the text.
+
+^ (caret): Matches the start of a line or string.
+$ (dollar): Matches the end of a line or string.
+\A (uppercase A): Matches the start of a string (but not internal line breaks).
+\Z (uppercase Z): Matches the end of a string (but not internal line breaks).
+\b (word boundary): Matches the empty string at the beginning or end of a word.
+\B (non-word boundary): Matches the empty string not at the beginning or end of a word.
+Groups and Capture:
+Groups allow you to group multiple elements together and apply quantifiers or other operations to them as a whole. Parentheses () are used to define groups.
+
+(ab)+: Matches one or more occurrences of the sequence "ab".
+(a|b): Matches either "a" or "b".
+Escape Sequences:
+Certain characters have special meaning in regex and need to be escaped with a backslash () to match them literally. Some common escape sequences are:
+
+. (escaped dot): Matches a literal dot character.
